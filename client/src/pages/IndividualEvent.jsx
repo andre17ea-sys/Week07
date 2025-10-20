@@ -8,9 +8,7 @@ export default function IndividualEvent() {
   // fetch a single event by id
   useEffect(() => {
     async function fetchEvent() {
-      const res = await fetch(
-        `https://week07-client.onrender.com/events/${id}`
-      );
+      const res = await fetch(`https://week07-ridv.onrender.com/events/${id}`);
       const data = await res.json();
       setEvent(data);
     }

@@ -15,7 +15,7 @@ export default function EventForm({ setEvents }) {
     e.preventDefault();
 
     // send title, description și date
-    const res = await fetch("http://localhost:8080/events", {
+    const res = await fetch("https://week07-ridv.onrender.com/events", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

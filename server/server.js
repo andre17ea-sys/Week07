@@ -12,7 +12,10 @@ dotenv.config();
 // setup sql connection -connection string
 const db = new pg.Pool({
   connectionString: process.env.DB_CONN,
-  ssl: { rejectUnauthorized: false }, //Supabase
+  ssl: {
+    require: true,
+    rejectUnauthorized: false,
+  }, //Supabase
 });
 
 // root endpoint just to test server
