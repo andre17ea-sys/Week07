@@ -22,17 +22,6 @@ app.get("/", (req, res) => {
   res.send("Server running!");
 });
 
-// endpoint to test DB connection
-app.get("/test-db", async (req, res) => {
-  try {
-    const result = await db.query("SELECT 1");
-    res.json({ success: true, result: result.rows });
-  } catch (error) {
-    console.error("DB connection error:", error);
-    res.status(500).json({ error: "Cannot connect to DB" });
-  }
-});
-
 // endpoint to get all events
 app.get("/events", async (req, res) => {
   try {
