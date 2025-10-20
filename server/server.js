@@ -25,14 +25,13 @@ app.get("/", (req, res) => {
 // endpoint to get all events
 app.get("/events", async (req, res) => {
   try {
-    const events = (
-      await db.query(`
+    const events = await db.query(`
         SELECT events.id, events.title, events.description, events.date, realms.name AS realm_name
         FROM events
         JOIN realms ON events.realm_id = realms.id
         ORDER BY events.date ASC
-      `)
-    ).rows;
+      `);
+    console.log("DB query result:", result.rows);
     res.json(events);
   } catch (error) {
     console.error("DB error:", error);
