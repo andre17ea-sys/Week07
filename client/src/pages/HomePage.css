@@ -4,14 +4,17 @@
   background-position: center;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 100vh;
+
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
   color: #f7ff07;
-  padding: 0 1rem;
+  padding-top: 7rem;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .home-title {
