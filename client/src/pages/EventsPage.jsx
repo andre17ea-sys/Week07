@@ -8,7 +8,7 @@ export default function EventsPage() {
   // fetch all events
   useEffect(() => {
     async function fetchData() {
-      const res = await fetch("http://localhost:8080/events");
+      const res = await fetch("https://week07-client.onrender.com");
       const data = await res.json();
       setEvents(data);
     }
